@@ -30,14 +30,14 @@ const Detail = () => {
       {metadata && (
         <>
           <img src={metadata.image} alt={metadata.name} />
-          <div>{metadata.name}</div>
-          <div>{metadata.description}</div>
+          <div className="text-white text-xl">{metadata.name}</div>
+          <div className="text-gray-900">{metadata.description}</div>
           <ul>
             {metadata.attributes.map((v, i) => {
               return (
                 <li>
-                  <div>{v.trait_type}</div>
-                  <div>{v.value}</div>
+                  <div className="text-white text-xl">{v.trait_type}</div>
+                  <div className="text-yellow-400 text-xl">{v.value}</div>
                 </li>
               );
             })}
